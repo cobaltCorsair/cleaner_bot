@@ -6,6 +6,5 @@
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-cleaner_bot.py
 cleaner_logs.txt
 venv/

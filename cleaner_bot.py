@@ -33,7 +33,7 @@ class Daemon:
         logs = {"Deleted files": self.deleted_files,
                 "Date of last cleaning": self.this_date.isoformat(' ', 'seconds')}
 
-        if self.deleted_files is not 0:
+        if self.deleted_files != 0:
             with open('cleaner_logs.txt', 'w') as out:
                 for key, val in logs.items():
                     out.write('{}: {}\n'.format(key, val))

@@ -19,7 +19,8 @@ class Daemon:
             last_time_mod = datetime.fromtimestamp(os.path.getmtime(file_path))
             if file_extension in self.extensions and self.this_date - last_time_mod >= timedelta(days=30):
                 self.delete_file(file_path, last_time_mod)
-        self.create_log()
+        # раскомментировать, чтобы писались логи
+        # self.create_log()
 
     def delete_file(self, filepath, last_time_mod):
         """Метод для удаления файлов"""
@@ -46,5 +47,5 @@ class Daemon:
 
 
 # путь к папке, которую будем чистить
-folder_path = r'D:\testfolder'
+folder_path = r'/home/planner1/planning/dcmPhaseSpace_build'
 Daemon(folder_path).check_folder()
